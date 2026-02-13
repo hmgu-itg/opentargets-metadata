@@ -1,5 +1,5 @@
 {
-  "colocalisation_coloc": ["leftStudyLocusId", "rightStudyLocusId", "chromosome", "h4", "rightStudyType", "numberColocalisingVariants", "h0", "h1", "h2", "h3"],
+  "colocalisation_coloc": ["leftStudyLocusId", "rightStudyLocusId", "chromosome", "h4", "rightStudyType", "numberColocalisingVariants", "h0", "h1", "h2", "h3", "betaRatioSignAverage"],
   "credible_set": ["studyLocusId", "studyId", "variantId", "isTransQtl"],
   "l2g_prediction": ["studyLocusId", "geneId", "score"],
   "evidence": ["studyId", "targetId", "diseaseId"],
