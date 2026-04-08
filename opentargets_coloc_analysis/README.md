@@ -1,56 +1,50 @@
-# OpenTargets Coloc Analysis
+# OpenTargets Coloc Analysis (Scaffold)
 
-This project provides tools for computing GWAS-QTL colocalization extracts and summary statistics. It is designed to be memory-safe and parameterized, allowing for efficient analysis of genetic data.
+## Status
 
-## Overview
+This directory contains an early-stage Python package scaffold for GWAS-QTL colocalization extraction and summary tooling.
 
-The OpenTargets Coloc Analysis module allows users to extract and summarize colocalization data from GWAS and QTL datasets. The main functionalities include:
+It is not yet a fully aligned, production-ready CLI package. The top-level script `../coloc_extract.py` is currently the maintained runnable workflow.
 
-- Extracting colocalization data from Parquet files.
-- Computing summary statistics from the extracted data.
-- Providing a command-line interface for ease of use.
+## Current Contents
+
+- `src/cli.py`: argument parsing entry point draft
+- `src/main.py`: pipeline orchestration draft
+- `src/coloc/extract.py`: query/extract helper functions
+- `src/coloc/summary.py`: summary helper prototype
+- `setup.py`: package metadata draft
+- `requirements.txt`: local package dependencies
 
 ## Installation
 
-To install the required dependencies, you can use pip. First, clone the repository and navigate to the project directory:
-
-```bash
-git clone <repository-url>
-cd opentargets_coloc_analysis
-```
-
-Then, install the required packages:
+From this directory:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
+## Usage Notes
 
-### Command Line Interface
-
-You can run the analysis using the command line. The basic usage is as follows:
-
-```bash
-python -m src.cli --help
-```
-
-This will display the available options and parameters for the analysis.
-
-### Example Command
-
-To perform a colocalization analysis, you can use a command like:
+- The module structure and imports are still being normalized.
+- CLI examples previously documented here may not run without additional packaging/import fixes.
+- For reproducible extraction runs, use the top-level script:
 
 ```bash
-python -m src.cli --input <input_parquet_file> --output <output_directory> --h4_threshold <threshold_value>
+python ../coloc_extract.py --help
 ```
 
-Replace `<input_parquet_file>`, `<output_directory>`, and `<threshold_value>` with your specific parameters.
+## Dependencies
 
-## Contributing
-
-Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request.
+Dependencies currently listed in `requirements.txt`:
+- DuckDB
+- pyarrow
+- pandas
+- numpy
+- argparse
+- scikit-learn
+- matplotlib
+- seaborn
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This subdirectory follows the repository-level MIT license. See `../LICENSE`.
